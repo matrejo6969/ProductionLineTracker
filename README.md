@@ -8,7 +8,7 @@ COP 3003 OOP Project
 ![](Programvisual.jpg)
 
 ## Diagram
-![](Diagram.jpg)
+![](Diagrams.jpg)
 
 ## Built using
 
