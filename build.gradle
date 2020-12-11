@@ -1,14 +1,9 @@
-/* ---------------------------------------------------
- * File: build.gradle
- * @author Lyla Kramer
- * Org: COP 3003, Fall 2020
- * For: Gradle file to connect to database
- * --------------------------------------------------- */
+
 
 plugins {
     id 'java'
-    id 'application'
-    id 'org.openjfx.javafxplugin' version '0.0.7'
+id 'application'
+id 'org.openjfx.javafxplugin' version '0.0.7'
 }
 
 sourceCompatibility = 11
@@ -20,7 +15,7 @@ javafx {
 
 mainClassName = 'Main'
 
-group 'io.github.lmk49'
+group 'io.github.matrejo6969'
 version '1.0'
 
 repositories {

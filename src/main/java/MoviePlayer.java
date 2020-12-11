@@ -1,3 +1,11 @@
+/**
+ * MoviePlayer Class
+ *
+ * @author MiguelTrejo
+ * MoviePlayer class creates a product object that holds data as a MoviePlayer
+ * while being implemented by the MultimeidaContro and extends Product.
+ */
+
 public class MoviePlayer extends Product implements MultimediaControl{
     Screen screen;
     MonitorType monitorType;

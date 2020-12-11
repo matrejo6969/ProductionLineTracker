@@ -1,3 +1,11 @@
+/**
+ * Controller class
+ *
+ * @author MiguelTrejo
+ * The Controller Class observed by the sample.fxml file, provides a GUI,
+ * a method to connect to the Database and display information.
+ */
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,10 +21,10 @@ public class Controller {
 
     @FXML
     private TextField txtManufacturer;
-    
+
     @FXML
     private ChoiceBox<String> chbItemType;
-    
+
     @FXML
     private Button btnAddProduct;
 
@@ -69,10 +77,10 @@ public class Controller {
         }
         // Fill choice box w/ enum types
         chbItemType.getItems().addAll(
-                String.valueOf(ItemType.AUDIO),
-                String.valueOf(ItemType.VISUAL),
-                String.valueOf(ItemType.VISUAL_MOBILE),
-                String.valueOf(ItemType.AUDIO_MOBILE));
+            String.valueOf(ItemType.AUDIO),
+            String.valueOf(ItemType.VISUAL),
+            String.valueOf(ItemType.VISUAL_MOBILE),
+            String.valueOf(ItemType.AUDIO_MOBILE));
         chbItemType.getSelectionModel().selectFirst();
 
         //New Code
@@ -114,21 +122,21 @@ public class Controller {
 
 
             String sql = "select PRODUCTION_NUM, PRODUCT_ID, SERIAL_NUM, DATE_PRODUCED" +
-                    "\nfrom PRODUCTIONRECORD";
+                "\nfrom PRODUCTIONRECORD";
 
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
                 txaOutput.appendText(
-                        ("PRODUCT NUM: ") + rs.getString(1) + (" ") +
-                                ("PRODUCT ID ") + rs.getString(2) + (" ") +
-                                ("SERIAL_NUM ") + rs.getString(3) + (" ") +
-                                ("DATE: ") + rs.getString(4) + (" ") +
-                                "\n");
+                    ("PRODUCT NUM: ") + rs.getString(1) + (" ") +
+                        ("PRODUCT ID ") + rs.getString(2) + (" ") +
+                        ("SERIAL_NUM ") + rs.getString(3) + (" ") +
+                        ("DATE: ") + rs.getString(4) + (" ") +
+                        "\n");
             }
 
             // Adding product into database
             final String insertSql = "INSERT INTO PRODUCT(NAME, MANUFACTURER, TYPE)"
-                    + "VALUES (?, ?, ?)";
+                + "VALUES (?, ?, ?)";
 
             // Prepared Statements w/ parameters
             PreparedStatement pStatement = conn.prepareStatement(insertSql);
@@ -169,7 +177,6 @@ public class Controller {
         txlChooseProducts.setItems(data);
     }
    /* public void showProductList() {
-
         try {
             stmt = conn.createStatement();
             String searchSql = "SELECT * FROM PRODUCT";
@@ -182,18 +189,11 @@ public class Controller {
                     String type = bs.getString(3);
                 }
             }
-
-
-
-
             conn.close();
-
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-
         setupProductLineTable();
-
     }*/
 
 

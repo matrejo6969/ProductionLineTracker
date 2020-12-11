@@ -1,3 +1,11 @@
+/**
+ * ProductionRecord Class
+ *
+ * @author MiguelTrejo
+ * The ProductionRecord class holds data of the products being made and added
+ * with a serialnumber.
+ */
+
 import java.util.Date;
 
 public class ProductionRecord {

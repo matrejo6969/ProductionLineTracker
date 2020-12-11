@@ -1,3 +1,12 @@
+/**
+ * AudioPlayer Class
+ *
+ * @author MiguelTrejo
+ * The AudioPlayer class is exteded from the Product class and
+ * implements MultimediaControl Interface. It purpose is to use
+ * the audio player objects in Product.
+ */
+
 class AudioPlayer extends Product implements MultimediaControl {
     String supportedAudioFormats;
     String supportedPlaylistFormats;

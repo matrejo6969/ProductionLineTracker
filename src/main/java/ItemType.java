@@ -1,3 +1,10 @@
+/**
+ * ItemType Enum
+ *
+ * @author MiguelTrejo
+ * ItemType enum has a String and ItemType code for each ItemType.
+ */
+
 public enum ItemType {
     AUDIO("AU"),
     VISUAL("VI"),
@@ -10,7 +17,12 @@ public enum ItemType {
         this.code = code;
     }
 
-    private String getCode() {
+    public String getItemTypeChoice() {
+        return this.code;
+    }
+
+    public String getCode() {
         return code;
     }
+
 }

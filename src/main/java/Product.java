@@ -1,3 +1,10 @@
+/**
+ * Product Class/Widget
+ *
+ * @author MiguelTrejo
+ * The Product class creates a Product object with Widget class within.
+ * */
+
 public abstract class Product implements Item {
 
     int id;

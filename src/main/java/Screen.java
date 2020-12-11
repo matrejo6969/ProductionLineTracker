@@ -1,3 +1,11 @@
+/**
+ * Screen Class
+ *
+ * @author MiguelTrejo
+ * Screen class is used for MoviePlayer class to create a screen object. This
+ * also implements ScreenSpec
+ */
+
 public class Screen implements ScreenSpec{
     String resolution;
     int refreshRate;

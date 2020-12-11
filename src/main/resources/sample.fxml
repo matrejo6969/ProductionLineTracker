@@ -45,8 +45,8 @@
                     <columns>
                         <TableColumn fx:id="tblProductID" prefWidth="139.0" text="Product ID" />
                         <TableColumn fx:id="tblProductName" minWidth="0.0" prefWidth="152.0" text="Product Line" />
-                  <TableColumn fx:id="tblManufacturer" prefWidth="137.0" text="Manufacturer" />
-                  <TableColumn fx:id="tblItemType" prefWidth="150.0" text="Item Type" />
+                        <TableColumn fx:id="tblManufacturer" prefWidth="137.0" text="Manufacturer" />
+                        <TableColumn fx:id="tblItemType" prefWidth="150.0" text="Item Type" />
                     </columns>
                 </TableView>
                 <Label layoutX="11.0" layoutY="167.0" text="Existing Products" />
@@ -67,7 +67,5 @@
             </AnchorPane>
         </Tab>
     </TabPane>
-    <stylesheets>
-        <URL value="@../../../resources/production1.css" />
-    </stylesheets>
+
 </Pane>

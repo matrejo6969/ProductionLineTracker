@@ -1,4 +1,12 @@
+/**
+ * Main class
+ *
+ * @author MiguelTrejo
+ * Main class where the application start and main method exist.
+ */
+
 import java.util.Date;
+import java.util.Scanner;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,18 +16,15 @@ import javafx.stage.Stage;
 public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter Employee Name (first last)");
+        String name = scan.nextLine();
+        System.out.println("Enter Employee password");
+        String password = scan.nextLine();
+        Employee employee = new Employee(name, password);
+        System.out.println(employee);
 
-        Product productProduced = new Widget("iPod", "Apple", ItemType.AUDIO);
 
-        // test constructor used when creating production records from user interface
-        int numProduced = 3;  // this will come from the combobox in the UI
-        int itemCount = 0;
-
-        for (int productionRunProduct = 0; productionRunProduct < numProduced; productionRunProduct++) {
-            ProductionRecord pr = new ProductionRecord(productProduced, itemCount++);
-            // using the iterator as the product id for testing
-            System.out.println(pr.toString());
-        }
 
     }
 

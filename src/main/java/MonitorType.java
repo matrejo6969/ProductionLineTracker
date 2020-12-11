@@ -1,3 +1,10 @@
+/**
+ * MonitorType Enum
+ *
+ * @author MiguelTrejo
+ * MonitorType Enum only contains two values; LCD, LED
+ */
+
 public enum MonitorType {
- Type, LCD, LED;
+ LCD, LED;
 }
